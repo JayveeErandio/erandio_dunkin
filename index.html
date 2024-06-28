@@ -40,10 +40,12 @@
 		.nav-link {
 			font-size: 25px;
 		}
+		.nav-link:hover {
+			color: #e50 !important;
+		}
 		
 		@media (min-width: 768px){
 			nav {
-				width: 1200px;
 				max-height: 80px;
 			}
 			#logo {
@@ -59,46 +61,50 @@
 				font-size: 20px;
 			}
 		}
+		@media (min-width: 1200px){
+			nav {
+				width: 1200px;
+			}
+		}
 	</style>
 </head>
 <body style="background: gray">
 	<header class="sticky-top">
-	<nav class="navbar navbar-expand-md mx-md-auto navbar-light p-3 bg-light ">
-		<div class="navbar-brand col-6 col-md-2">
-			<img class="img-fluid p-2" id="logo" src="images/logo.jpeg">
-		</div>
-		<button class="navbar-toggler border-0 col-4" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="order-md-2 ms-auto collapse navbar-collapse flex-row-reverse" id="navLinks">
-			<ul class="navbar-nav mr-auto">
-			  <li class="nav-item mx-md-3">
-				<a class="nav-link" href="#">Home</a>
-			  </li>
-			  <li class="nav-item mx-md-3">
-				<a class="nav-link" href="#">About</a>
-			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="#">Products</a>
-			  </li>
-			</ul>
-		</div>
-		<div class="w-100 d-block d-md-none"></div>
-		<div id="search_bar" class="order-md-1 mx-auto col-8 col-md-3">
-			<div class="m-2" id="search_placeholder">
-				<img src="images/icon_search.png" style="float: left;">
-				<p class="display-6" style="float: left">Search</p>
+		<nav class="navbar navbar-expand-md mx-md-auto navbar-light p-3 bg-light ">
+			<div class="navbar-brand col-6 col-md-2">
+				<img class="img-fluid p-2" id="logo" src="images/logo.jpeg">
 			</div>
-			<form>
-				<input class="form-control mx-auto" type="search">
-			</form>
-		</div>
-	</nav>
+			<button class="navbar-toggler border-0 col-4" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="order-md-2 collapse navbar-collapse flex-row-reverse" id="navLinks">
+				<ul class="navbar-nav mr-auto">
+				  <li class="nav-item mx-md-3">
+					<a class="nav-link" href="#">Home</a>
+				  </li>
+				  <li class="nav-item mx-md-3">
+					<a class="nav-link" href="#">About</a>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="#">Products</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="w-100 d-block d-md-none"></div>
+			<div id="search_bar" class="order-md-1 mx-auto col-8 col-md-3">
+				<div class="m-2" id="search_placeholder">
+					<img src="images/icon_search.png" style="float: left;">
+					<p class="display-6" style="float: left">Search</p>
+				</div>
+				<form>
+					<input class="form-control mx-auto" type="search">
+				</form>
+			</div>
+		</nav>
 	</header>
-	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
 	
-	<!--<section id="section_intro" >
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+	<section id="section_intro">
+		<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="images/try1.png" class="d-block w-100">
@@ -108,7 +114,8 @@
 				</div>
 			</div>
 		</div>
-	</section>-->
+	</section>
+	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
 	<section></section>
 	<section></section>
 	<section></section>
