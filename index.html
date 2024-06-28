@@ -13,103 +13,91 @@
 		* {
 			font-family: frankfurter;
 		}
-		header {
-			max-height: 80px;
+		header{
+			background: white;
 		}
-		header .row {
-			width: 1200px;
-			height: max-content;
-			transform: translateY(-10px);
-		}
-		.img-fluid {
-			transform: translateY(20px);
-			border: 3px solid magenta;
+		#logo {
+			border: 5px solid magenta;
 			border-radius: 20px;
+			background: white;
 		}
-		.navbar-toggler {
-			font-size: 4rem;
-			margin-left: auto;
-		}
-		a {
-			font-size: 50px;
-			margin-left: 30px;
-		}
-		a:hover {
-			color: #e50 !important;
-		}
-		#search_bar {
-			z-index: 3;
-			cursor: text;
-			font-size: 60px;
-			transform: translateX(20px);
-		}
-		#search_bar img {
+		.navbar-toggler-icon {
+			width: 40%;
 			height: 60px;
-		}
-		input[type="search"]{
-			border: 1px solid gray;
-			border-radius: 10px;
-			padding-left: 15px;
-			width: 100%;
-		}
-		input[type="search"]:focus {
-			outline: none;
 		}
 		#search_placeholder {
 			position: absolute;
 			opacity: 0.5;
-			user-select: none;
-			z-index: 1;
-			width: 100%;
-			transform: translate(18px, 5px);
 		}
+		#search_placeholder img{
+			height: 35px;
+		}
+		input[type="search"]{
+			border-radius: 20px;
+			font-size: 25px;
+			line-height: 0px;
+		}
+		.nav-link {
+			font-size: 25px;
+		}
+		
 		@media (min-width: 768px){
-			a {
-				font-size: 24px;
+			nav {
+				width: 1200px;
+				max-height: 80px;
 			}
-			#search_bar {
-				font-size: 24px;
+			#logo {
+				transform: translateY(20px);
 			}
-			#search_bar img {
+			#search_placeholder p{
+				font-size: 25px;
+			}
+			#search_placeholder img{
 				height: 30px;
+			}
+			.nav-link {
+				font-size: 20px;
 			}
 		}
 	</style>
 </head>
-<body>
-	<header class="sticky-top bg-light">
-		<div class="row mx-auto p-3">
-			<div class="col-md-2 col-5">
-				<img class="img-fluid p-1 bg-light" src="images/logo.jpeg">
-			</div>
-			<nav class="navbar navbar-expand-md col-6 col-md-5 order-md-2 navbar-light ms-auto">
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<ul class="navbar-nav collapse flex-row-reverse navbar-collapse align-items-end navbar-dark" id="navbarSupportedContent">
-					<li class="nav-item">
-						<a class="nav-link text-dark" href="#">Products</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-dark" href="#">About</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-dark" href="#">Home</a>
-					</li>
-				</ul>
-			</nav>
-			<div class="w-100 d-block d-md-none"></div>
-			<div id="search_bar" class="pt-3 mt-5 col-6 col-md-4 order-md-1 m-auto m-md-0  col-2">
-				<div id="search_placeholder">
-					<img src="images/icon_search.png" style="float: left;">
-					<p style="float: left">Search...</p>
-				</div>
-				<form><input type="search"></form>
-			</div>
+<body style="background: gray">
+	<header class="sticky-top">
+	<nav class="navbar navbar-expand-md mx-md-auto navbar-light p-3 bg-light ">
+		<div class="navbar-brand col-6 col-md-2">
+			<img class="img-fluid p-2" id="logo" src="images/logo.jpeg">
 		</div>
+		<button class="navbar-toggler border-0 col-4" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="order-md-2 ms-auto collapse navbar-collapse flex-row-reverse" id="navLinks">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item mx-md-3">
+				<a class="nav-link" href="#">Home</a>
+			  </li>
+			  <li class="nav-item mx-md-3">
+				<a class="nav-link" href="#">About</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Products</a>
+			  </li>
+			</ul>
+		</div>
+		<div class="w-100 d-block d-md-none"></div>
+		<div id="search_bar" class="order-md-1 mx-auto col-8 col-md-3">
+			<div class="m-2" id="search_placeholder">
+				<img src="images/icon_search.png" style="float: left;">
+				<p class="display-6" style="float: left">Search</p>
+			</div>
+			<form>
+				<input class="form-control mx-auto" type="search">
+			</form>
+		</div>
+	</nav>
 	</header>
+	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
 	
-	<section id="section_intro" >
+	<!--<section id="section_intro" >
 		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
@@ -120,7 +108,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 	<section></section>
 	<section></section>
 	<section></section>
