@@ -84,6 +84,10 @@
 			font-size: 1vw;
 			margin-bottom: 0;
 		}
+		#section_endorse {
+			margin-top: 10vw;
+			margin-bottom: 10vw;
+		}
 		#section_endorse img {
 			transform: scale(0.8)
 		}
@@ -92,6 +96,37 @@
 		}
 		#section_endorse p {
 			font-size: 1.5vw;
+		}
+		.collection {
+			height: max-content;
+			white-space: nowrap;
+			position: relative;
+			overflow-x: auto;
+			overflow-y: hidden;
+			user-select: none;
+		}
+		.collection p {
+			white-space: wrap;
+		}
+		.collection div {
+			background-color: #eee;
+			float: none;
+			height: 90%;
+			margin: 0 0.25%;
+			display: inline-block;
+			zoom: 1;
+		}
+		.collection {
+			width: 50vw;
+			margin: auto;
+		}
+		.collection .profile {
+			width: 5vw;
+			height: 5vw;
+			float: left;
+		}
+		.collection .name {
+			
 		}
 		a {
 			text-decoration: none;
@@ -297,8 +332,35 @@
 			</div>
 		</div>
 	</section>
+	<section>
+		<div class="collection">
+			<div>
+				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="star" src="images/rate5.png">
+				<p>Dunking donuts will always be my all time favorite 
+					donuts!! I grew up loving these classic donuts!!! 
+					Choco butternut, Chico honey dip etc. Will never 
+					get tired of this.</p>
+			</div>
+			<div>
+				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="star" src="images/rate5.png">
+				<p>Dunking donuts will always be my all time favorite 
+					donuts!! I grew up loving these classic donuts!!! 
+					Choco butternut, Chico honey dip etc. Will never 
+					get tired of this.</p>
+			</div>
+			<div>
+				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="star" src="images/rate5.png">
+				<p>Dunking donuts will always be my all time favorite 
+					donuts!! I grew up loving these classic donuts!!! 
+					Choco butternut, Chico honey dip etc. Will never 
+					get tired of this.</p>
+			</div>
+		</div>
+	</section>
 	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
-	<section></section>
 	<footer></footer>
 	
 	<script>
@@ -340,6 +402,23 @@
 				shapeUnhover(a);
 			})
 		}
+		
+		collection = document.querySelector(".collection");
+		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
+			collection.style.overflowX = "hidden";
+	
+		var istouch = false;
+		collection.addEventListener("mousedown", function(){
+			istouch = true;
+			console.log(89)
+		});
+		collection.addEventListener("mousemove", function(ev){
+			if(istouch)
+				collection.scrollLeft -= ev.movementX
+		});
+		document.body.addEventListener("mouseup", function(){
+			istouch = false;
+		});	
 	</script>
 </body>
 </html>
