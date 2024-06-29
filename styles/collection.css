@@ -1,0 +1,17 @@
+.collection {
+	height: max-content;
+	white-space: nowrap;
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	user-select: none;
+}
+.collection p {
+	white-space: wrap;
+}
+.collection div {
+	float: none;
+	margin: 0.25%;
+	display: inline-block;
+	zoom: 1;
+}
