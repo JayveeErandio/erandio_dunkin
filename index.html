@@ -109,7 +109,6 @@
 			white-space: wrap;
 		}
 		.collection div {
-			background-color: #eee;
 			float: none;
 			height: 90%;
 			margin: 0 0.25%;
@@ -117,8 +116,19 @@
 			zoom: 1;
 		}
 		.collection {
-			width: 50vw;
+			width: 100vw;
 			margin: auto;
+			padding-left: 12vw;
+			padding-right: 12vw;
+		}
+		.collection p {
+			font-size: 0.15in;
+		}
+		.collection div {
+			padding: 20px;
+			border-radius: 20px;
+			width: 60%;
+			background: #f7f7f7;
 		}
 		.collection .profile {
 			width: 5vw;
@@ -126,7 +136,12 @@
 			float: left;
 		}
 		.collection .name {
-			
+			margin-left: 30px;
+		}
+		.collection .star {
+			width: 110px;
+			margin-top: -12%;
+			filter: brightness(85%)
 		}
 		a {
 			text-decoration: none;
@@ -144,6 +159,13 @@
 			}
 			#section_endorse h6 {
 				font-size: 2.4vw;
+			}
+			.collection p {
+				font-size: 0.24in;
+			}
+			.collection .star {
+				width: 110px;
+				margin-top: -8%;
 			}
 		}
 		@media (min-width: 1200px){
@@ -169,6 +191,17 @@
 			}
 			#section_endorse h6 {
 				font-size: 1.5vw;
+			}
+			.collection .profile {
+				width: 2vw;
+				height: 2vw;
+				float: left;
+			}
+			.collection p {
+				font-size: 0.2in;
+			}
+			.collection div {
+				width: 43%;
 			}
 		}
 	</style>
@@ -332,10 +365,10 @@
 			</div>
 		</div>
 	</section>
-	<section>
+	<section id="section_review">
 		<div class="collection">
 			<div>
-				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="profile" src="images/profile.png"><p class="name">Angelo R.</p>
 				<img class="star" src="images/rate5.png">
 				<p>Dunking donuts will always be my all time favorite 
 					donuts!! I grew up loving these classic donuts!!! 
@@ -343,7 +376,7 @@
 					get tired of this.</p>
 			</div>
 			<div>
-				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="profile" src="images/profile.png"><p class="name">Angelo R.</p>
 				<img class="star" src="images/rate5.png">
 				<p>Dunking donuts will always be my all time favorite 
 					donuts!! I grew up loving these classic donuts!!! 
@@ -351,7 +384,7 @@
 					get tired of this.</p>
 			</div>
 			<div>
-				<img class="profile" src="aso.png"><p class="name">Angelo R.</p>
+				<img class="profile" src="images/profile.png"><p class="name">Angelo R.</p>
 				<img class="star" src="images/rate5.png">
 				<p>Dunking donuts will always be my all time favorite 
 					donuts!! I grew up loving these classic donuts!!! 
