@@ -6,6 +6,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles/header.css">
+	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/collection.css">
+
 	<style>
 		.activeLink {
 			color: #e50 !important;
@@ -105,24 +108,7 @@
 			margin-bottom: 100px;
 		}
 		.collection {
-			height: max-content;
-			white-space: nowrap;
-			position: relative;
-			overflow-x: auto;
-			overflow-y: hidden;
-			user-select: none;
-		}
-		.collection p {
-			white-space: wrap;
-		}
-		.collection div {
-			float: none;
-			margin: 0.25%;
-			display: inline-block;
-			zoom: 1;
-		}
-		.collection {
-			width: 99vw;
+			width: 97vw;
 			margin: auto;
 			padding-left: 12vw;
 			padding-right: 12vw;
@@ -152,13 +138,7 @@
 			margin-top: -12%;
 			filter: brightness(85%)
 		}
-		footer {
-			background: #f0f;
-		}
-		footer ul {
-			list-style-type: none;
-			padding: 0;
-		}
+		
 		a {
 			text-decoration: none;
 		}
@@ -457,21 +437,8 @@
 			</div>
 		</div>
 	</footer>
+	<script src="scripts/searchbar.js"></script>
 	<script>
-		search = document.querySelector("input[type='search']")
-		searchPlaceholder = document.querySelector("#search_placeholder");
-		searchBar = document.querySelector("#search_bar");
-		searchBar.onclick = function(){
-			search.focus()
-		}
-		
-		search.addEventListener("input", function(){
-			if(search.value.length >= 1)
-				searchPlaceholder.style.display = "none";
-			else 
-				searchPlaceholder.style.display = "block"
-		});
-		
 		shape = document.querySelectorAll(".shape");
 		
 		function shapeHover(a){
@@ -496,23 +463,7 @@
 				shapeUnhover(a);
 			})
 		}
-		
-		collection = document.querySelector(".collection");
-		if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
-			collection.style.overflowX = "hidden";
-	
-		var istouch = false;
-		collection.addEventListener("mousedown", function(){
-			istouch = true;
-			console.log(89)
-		});
-		collection.addEventListener("mousemove", function(ev){
-			if(istouch)
-				collection.scrollLeft -= ev.movementX
-		});
-		document.body.addEventListener("mouseup", function(){
-			istouch = false;
-		});	
 	</script>
+	<script src="scripts/collection.js"></script>
 </body>
 </html>
