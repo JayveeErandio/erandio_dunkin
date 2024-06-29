@@ -1,0 +1,59 @@
+@font-face {
+	font-family: frankfurter;
+	src: url(../frankfurter.otf);
+}
+* {
+	font-family: frankfurter;
+}
+header{
+	background: white;
+}
+#logo {
+	border: 5px solid magenta;
+	border-radius: 20px;
+	background: white;
+}
+.navbar-toggler-icon {
+	width: 40%;
+	height: 60px;
+}
+#search_placeholder {
+	position: absolute;
+	opacity: 0.5;
+}
+#search_placeholder img{
+	height: 35px;
+}
+input[type="search"]{
+	border-radius: 20px;
+	font-size: 25px;
+	line-height: 0px;
+}
+.nav-link {
+	font-size: 25px;
+}
+.nav-link:hover {
+	color: #e50 !important;
+}
+@media (min-width: 768px){
+	nav {
+		max-height: 80px;
+	}
+	#logo {
+		transform: translateY(20px);
+	}
+	#search_placeholder p{
+		font-size: 25px;
+	}
+	#search_placeholder img{
+		height: 30px;
+	}
+	.nav-link {
+		font-size: 20px;
+	}
+}
+@media (min-width: 1200px){
+	nav {
+		width: 1200px;
+	}
+}
