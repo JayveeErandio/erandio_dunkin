@@ -7,7 +7,26 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles/header.css">
 	<link rel="stylesheet" href="styles/footer.css">
+	<link rel="stylesheet" href="styles/collection.css">
 	<style>
+		section {
+			width: 85vw;
+			margin: auto;
+		}
+		section h1 {
+			color: orange;
+			font-weight: 900;
+		}
+		.collection div{
+			background: #eee;
+			width: 30%;
+		}
+		.collection img {
+			transform: scale(0.9)
+		}
+		.collection p {
+			text-align: center;
+		}
 	</style>
 </head>
 <body>
@@ -44,6 +63,42 @@
 			</div>
 		</nav>
 	</header>
+	<section class="py-5">
+		<h1 class="text-center display-1">MENU</h1>
+		<div>
+			<h3>Rounds</h3>
+			<div class="collection">
+				<div>
+					<img class="img-fluid" src="images/rings/bavarian.png">
+					<p>Bavarian</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/boston-kreme.png">
+					<p>Boston Kreme</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/choco-wacko.png">
+					<p>Choco Wacko</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/death-by-choco.png">
+					<p>Cookie Death</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/blueberry.png">
+					<p>Blueberry</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/ube-premium.png">
+					<p>Ube Filled</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rings/dark-forest.png">
+					<p>Dark Forest</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<footer class="container-fluid pb-5">
 		<div class="row p-3 p-lg-5">
 			<div class="col-6 col-md-3"><img class="img-fluid" src="images/footer.png"></div>
@@ -92,5 +147,6 @@
 		</div>
 	</footer>
 	<script src="scripts/searchbar.js"></script>
+	<script src="scripts/collection.js"></script>
 </body>
 </html>
