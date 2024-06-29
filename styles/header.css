@@ -5,6 +5,10 @@
 * {
 	font-family: frankfurter;
 }
+.activeLink {
+	color: #e50 !important;
+	cursor: default;
+}
 header{
 	background: white;
 }
@@ -36,6 +40,9 @@ input[type="search"]{
 	color: #e50 !important;
 }
 @media (min-width: 768px){
+	.activeLink {
+		border-bottom: 3px solid magenta;
+	}
 	nav {
 		max-height: 80px;
 	}
