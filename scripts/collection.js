@@ -5,7 +5,6 @@ if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 var istouch = false;
 collection.addEventListener("mousedown", function(){
 	istouch = true;
-	console.log(89)
 });
 collection.addEventListener("mousemove", function(ev){
 	if(istouch)
