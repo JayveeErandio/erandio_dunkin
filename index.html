@@ -2,68 +2,80 @@
 <html>
 <head>
 	<title>Erandio - Final Proj</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="styles/header.css">
 	<style>
-		@font-face {
-			font-family: frankfurter;
-			src: url(frankfurter.otf);
-		}
-		* {
-			font-family: frankfurter;
-		}
-		header{
-			background: white;
-		}
-		#logo {
-			border: 5px solid magenta;
-			border-radius: 20px;
-			background: white;
-		}
-		.navbar-toggler-icon {
-			width: 40%;
-			height: 60px;
-		}
-		#search_placeholder {
-			position: absolute;
-			opacity: 0.5;
-		}
-		#search_placeholder img{
-			height: 35px;
-		}
-		input[type="search"]{
-			border-radius: 20px;
-			font-size: 25px;
-			line-height: 0px;
-		}
-		.nav-link {
-			font-size: 25px;
-		}
-		.nav-link:hover {
+		.activeLink {
 			color: #e50 !important;
+			cursor: default;
 		}
-		
+		#section_intro {
+			position: relative;
+		}
+		#section_intro .carousel {
+			filter: brightness(80%)
+		}
+		#section_intro .row {
+			width: 95vw;
+			margin: auto;
+			transform: translateY(-50%)
+		}
+		#section_intro .shape{
+			width: 21vw;
+			height: 21vw;
+			border: 3px solid #c0a;
+		}
+		#section_intro .shape img{
+			margin-top: -10px;
+		}
+		#section_intro .shape a{
+			text-decoration: none;
+		}
+		#section_intro .shape p{
+			color: #c0a;
+			margin-top: -12px;
+			font-size: 11px;
+		}
+		#section_intro .display-3 {
+			position: absolute;
+			top: 60px;
+			left: 50%;
+			transform: translateX(-50%)
+		}
 		@media (min-width: 768px){
-			nav {
-				max-height: 80px;
+			.activeLink {
+				border-bottom: 3px solid magenta;
 			}
-			#logo {
-				transform: translateY(20px);
+			#section_intro .row {
+				width: 70vw;
 			}
-			#search_placeholder p{
-				font-size: 25px;
-			}
-			#search_placeholder img{
-				height: 30px;
-			}
-			.nav-link {
-				font-size: 20px;
+			#section_intro .shape{
+				width: 15vw;
+				height: 15vw;
 			}
 		}
 		@media (min-width: 1200px){
-			nav {
-				width: 1200px;
+			.carousel, .carousel-item  {
+				height: 64vh;
+			}
+			.carousel img {
+				transform: translateY(-150px)
+			}
+			#section_intro .row {
+				width: 55vw;
+			}
+			#section_intro .shape{
+				width: 12vw;
+				height: 12vw;
+			}
+			#section_intro .shape img{
+				padding: 30px !important;
+			}
+			#section_intro .shape p{
+				font-size: 17px;
+				margin-top: -15px;
 			}
 		}
 	</style>
@@ -80,7 +92,7 @@
 			<div class="order-md-2 collapse navbar-collapse flex-row-reverse" id="navLinks">
 				<ul class="navbar-nav mr-auto">
 				  <li class="nav-item mx-md-3">
-					<a class="nav-link" href="#">Home</a>
+					<a class="nav-link activeLink">Home</a>
 				  </li>
 				  <li class="nav-item mx-md-3">
 					<a class="nav-link" href="#">About</a>
@@ -107,18 +119,47 @@
 		<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="images/try1.png" class="d-block w-100">
+					<img src="images/try1.png" class="d-block w-100" alt="asdasd">
 				</div>
 				<div class="carousel-item">
 					<img src="images/try2.png" class="d-block w-100">
 				</div>
 			</div>
 		</div>
-		<div id="row">
-			<div id="col"><img><p>Ring</p></div>
-			<div id="col"><img><p>Round</p></div>
-			<div id="col"><img><p>Long John</p></div>
-			<div id="col"><img><p>Munchkins</p></div>
+		<p class="display-3 text-light text-center">Explore the doughy sweetness!</p>
+		<div class="row text-center ">
+			<div class="col-3">
+				<div class="shape p-2 rounded-circle bg-light">
+					<a href="#">
+						<img class="img-fluid p-2" src="images/shape_ring.png">
+						<p>RING</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="shape p-2 rounded-circle bg-light">
+					<a href="#">
+						<img class="img-fluid p-2" src="images/shape_round.png">
+						<p>ROUND</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="shape p-2 rounded-circle bg-light">
+					<a href="#">
+						<img class="img-fluid p-3" src="images/shape_longjohn.png">
+						<p class="mb-3">LONG JOHN</p>
+					</a>
+				</div>
+			</div>
+			<div class="col-3">
+				<div class="shape p-2 rounded-circle bg-light">
+					<a href="#">
+						<img class="img-fluid p-2" src="images/shape_munchkin.png">
+						<p>MUNCHKIN</p>
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
 	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
