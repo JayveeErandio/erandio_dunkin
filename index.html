@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Erandio - Final Proj</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles/header.css">
@@ -55,6 +55,9 @@
 		#section_promo {
 			margin-top: -5vw;
 		}
+		#section_promo .img-fluid{
+			transform: scale(1.6);
+		}
 		#section_promo .container{
 			width: 70vw;
 			position: relative;
@@ -75,6 +78,7 @@
 			font-size: 4vw;
 			font-weight: 900;
 			letter-spacing: -1px;
+			z-index: 1;
 		}
 		#section_promo h6 {
 			font-size: 2.5vw;
@@ -256,10 +260,13 @@
 		<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="images/try1.png" class="d-block w-100" alt="asdasd">
+					<img src="images/thumbnail1.jpg" class="d-block w-100" alt="asdasd">
 				</div>
 				<div class="carousel-item">
-					<img src="images/try2.png" class="d-block w-100">
+					<img src="images/thumbnail2.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="images/thumbnail3.jpg" class="d-block w-100">
 				</div>
 			</div>
 		</div>
@@ -305,9 +312,9 @@
 				<p class="title text-warning">HERE COMES THE QUADS!</p>
 				<div class="row">
 					<div class="col-3 p-1">
-						<img class="img-fluid" src="images/try3.png">
+						<img class="img-fluid" src="images/promo1.png">
 					</div>
-					<div class="col-8 p-1 text-light">
+					<div class="offset-1 col-8 p-1 text-light">
 						<h6>Comes with 4 shapes at 75 pesos only</h6>
 						<p>This incoming week, the most famous shapes of Dunkin Donut: Ring, Round, 
 						Long John, and Midgets can be ordered at very small budget-friendly price. 
@@ -322,9 +329,9 @@
 				<p class="title text-primary">FREE DELIVERY?</p>
 				<div class="row">
 					<div class="col-3 p-1">
-						<img class="img-fluid" src="images/try3.png">
+						<img class="img-fluid" src="images/promo2.png">
 					</div>
-					<div class="col-8 p-1">
+					<div class="offset-1 col-8 p-1">
 						<h6>Set the date!</h6>
 						<p>Prepare yourself as ordering until the end of week will give you a free 
 						delivery. Don't miss out!</p>
@@ -344,7 +351,7 @@
 					donuts!! I grew up loving these classic donuts!!! 
 					Choco butternut, Chico honey dip etc. Will never 
 					get tired of this."</h6>
-					<p>- Derek Ramsay</p>
+					<p>- Derek R.</p>
 				</div>
 			</div>
 		</div>
@@ -356,7 +363,7 @@
 					execution. Indulge in the flavors of the world at 
 					Dunkin' Donuts, where every dish is a passport to 
 					culinary adventure."</h6>
-					<p>Piolo Pascual -</p>
+					<p>Piolo P. -</p>
 				</div>
 			</div>
 			<div class="col">
@@ -372,7 +379,7 @@
 					<h6>Very nice for dunkin donuts if you like to dunk donuts.
 					I was more than happy with my donut and enjoyed 
 					dunking it.. DD!</h6>
-					<p>- Dingdong Dantes</p>
+					<p>- Dingdong D.</p>
 				</div>
 			</div>
 		</div>
@@ -405,35 +412,35 @@
 	</section>
 	<footer class="container-fluid pb-5">
 		<div class="row p-3 p-lg-5">
-			<div class="col-6 col-md-3"><img class="img-fluid" src="images/donut1.png"></div>
+			<div class="col-6 col-md-3"><img class="img-fluid" src="images/footer.png"></div>
 			<div class="col-4 offset-1 offset-md-0 col-md-3">
 				<h3>Company</h3>
 				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Our Services</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Affiliate Program</a></li>
+					<li><a class="text-light" href="#">About Us</a></li>
+					<li><a class="text-light" href="#">Our Services</a></li>
+					<li><a class="text-light" href="#">Privacy Policy</a></li>
+					<li><a class="text-light" href="#">Affiliate Program</a></li>
 				</ul>
 			</div>
 			<div class="col-4 offset-1 offset-md-0 col-md-3">
 				<h3>Menu</h3>
 				<ul>
-					<li><a href="#">Ring</a></li>
-					<li><a href="#">Round</a></li>
-					<li><a href="#">Long John</a></li>
-					<li><a href="#">Munchkin</a></li>
+					<li><a class="text-light" href="#">Ring</a></li>
+					<li><a class="text-light" href="#">Round</a></li>
+					<li><a class="text-light" href="#">Long John</a></li>
+					<li><a class="text-light" href="#">Munchkin</a></li>
 				</ul>
 			</div>
 			<div class="col-4 offset-2 offset-md-0  col-md-3">
 				<h3>Order Transaction</h3>
 				<ul>
-					<li><a href="#">Delivery</a></li>
-					<li><a href="#">Pick-Up</a></li>
-					<li><a href="#">Transaction</a></li>
+					<li><a class="text-light" href="#">Delivery</a></li>
+					<li><a class="text-light" href="#">Pick-Up</a></li>
+					<li><a class="text-light" href="#">Transaction</a></li>
 				</ul>
 			</div>
 		</div>
-		<div class="row border-top mx-3">
+		<div class="row border-top mx-3 pt-2">
 			<div class="col-7">For Educational Purposes Only</div>
 			<div class="col col-md-2 ms-auto">
 				<div class="row">
