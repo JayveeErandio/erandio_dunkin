@@ -26,9 +26,14 @@
 			width: 21vw;
 			height: 21vw;
 			border: 3px solid #c0a;
+			transition: background 0.3s;
+		}
+		#section_intro .shape:hover {
+			background: #d0b !important;
 		}
 		#section_intro .shape img{
 			margin-top: -10px;
+			
 		}
 		#section_intro .shape a{
 			text-decoration: none;
@@ -172,7 +177,6 @@
 		search = document.querySelector("input[type='search']")
 		searchPlaceholder = document.querySelector("#search_placeholder");
 		searchBar = document.querySelector("#search_bar");
-		
 		searchBar.onclick = function(){
 			search.focus()
 		}
@@ -183,6 +187,31 @@
 			else 
 				searchPlaceholder.style.display = "block"
 		});
+		
+		shape = document.querySelectorAll(".shape");
+		
+		function shapeHover(a){
+			shape[a].querySelector("img").style.filter ="grayscale(100%) brightness(500%)";
+			shape[a].querySelector("p").style.color ="white";
+		}
+		function shapeUnhover(a){
+			shape[a].querySelector("img").style.filter ="grayscale(0%) brightness(100%)";
+			shape[a].querySelector("p").style.color ="#d0b";
+		}
+		for(let a = 0; a < shape.length; a++){
+			shape[a].addEventListener("mouseover", function(){
+				shapeHover(a);
+			})
+			shape[a].addEventListener("touchstart", function(){
+				shapeHover(a);
+			})
+			shape[a].addEventListener("mouseout", function(){
+				shapeUnhover(a);
+			})
+			shape[a].addEventListener("touchend", function(){
+				shapeUnhover(a);
+			})
+		}
 	</script>
 </body>
 </html>
