@@ -52,6 +52,41 @@
 			width: 80vw;
 			top: 20%;
 		}
+		#section_promo {
+			margin-top: -5vw;
+		}
+		#section_promo .container{
+			width: 70vw;
+			position: relative;
+			margin-top: 5vw;
+			border-radius: 10vw;
+			transition: transform 0.2s;
+			cursor: pointer;
+		}
+		#section_promo .container:hover {
+			transform: scale(1.02);
+		}
+		#section_promo .title{
+			-webkit-text-stroke: 0.01vw black !important;
+			text-shadow: 4px 4px 1px none;
+			position: absolute;
+			top: -3vw;
+			left: 3%;
+			font-size: 4vw;
+			font-weight: 900;
+			letter-spacing: -1px;
+		}
+		#section_promo h6 {
+			font-size: 2.5vw;
+			margin-top: 1vw;
+		}
+		#section_promo .row p {
+			font-size: 1vw;
+			margin-bottom: 0;
+		}
+		a {
+			text-decoration: none;
+		}
 		@media (min-width: 768px){
 			.activeLink {
 				border-bottom: 3px solid magenta;
@@ -88,7 +123,7 @@
 		}
 	</style>
 </head>
-<body style="background: gray">
+<body>
 	<header class="sticky-top">
 		<nav class="navbar navbar-expand-md mx-md-auto navbar-light p-3 bg-light ">
 			<div class="navbar-brand col-6 col-md-2">
@@ -170,7 +205,38 @@
 		</div>
 	</section>
 	<section id="section_promo">
-		
+		<div class="container bg-danger">
+			<a href="#">
+				<p class="title text-warning">HERE COMES THE QUADS!</p>
+				<div class="row">
+					<div class="col-3 p-1">
+						<img class="img-fluid" src="images/try3.png">
+					</div>
+					<div class="col-8 p-1 text-light">
+						<h6>Comes with 4 shapes at 75 pesos only</h6>
+						<p>This incoming week, the most famous shapes of Dunkin Donut: Ring, Round, 
+						Long John, and Midgets can be ordered at very small budget-friendly price. 
+						You can choose what flavor each of them. Don't miss because this will vanish 
+						at the end of August!</p>
+					</div>
+				</div>
+			</a>
+		</div>
+		<div class="container bg-warning">
+			<a href="#">
+				<p class="title text-primary">FREE DELIVERY?</p>
+				<div class="row">
+					<div class="col-3 p-1">
+						<img class="img-fluid" src="images/try3.png">
+					</div>
+					<div class="col-8 p-1">
+						<h6>Set the date!</h6>
+						<p>Prepare yourself as ordering until the end of week will give you a free 
+						delivery. Don't miss out!</p>
+					</div>
+				</div>
+			</a>
+		</div>
 	</section>
 	<h1>BEGINNING</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>BODY</h1><h1>END</h1>
 	<section></section>
