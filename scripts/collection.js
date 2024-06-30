@@ -1,15 +1,17 @@
-collection = document.querySelector(".collection");
-if(!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)))
-	collection.style.overflowX = "hidden";
+collection = document.querySelectorAll(".collection");
+
 	
-var istouch = false;
-collection.addEventListener("mousedown", function(){
-	istouch = true;
-});
-collection.addEventListener("mousemove", function(ev){
-	if(istouch)
-		collection.scrollLeft -= ev.movementX
-});
-document.body.addEventListener("mouseup", function(){
-	istouch = false;
-});	
+for(let a = 0; a < collection.length; a++){
+	collection[a].istouch = false;
+	var istouch = false;
+	collection[a].addEventListener("mousedown", function(){
+		collection[a].istouch = true;
+	});
+	collection[a].addEventListener("mousemove", function(ev){
+		if(collection[a].istouch)
+			collection[a].scrollLeft -= ev.movementX
+	});
+	document.body.addEventListener("mouseup", function(){
+		collection[a].istouch = false;
+	});	
+}
