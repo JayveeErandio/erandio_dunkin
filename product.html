@@ -17,15 +17,20 @@
 			color: orange;
 			font-weight: 900;
 		}
+		section h3 {
+			margin-top: 7vw;
+			color: #a07
+		}
 		.collection div{
 			background: #eee;
-			width: 30%;
+			width: 28%;
 		}
 		.collection img {
 			transform: scale(0.9)
 		}
 		.collection p {
 			text-align: center;
+			font-size: 3.5vw;
 		}
 		@media (min-width: 1000px) {
 			section {
@@ -33,6 +38,9 @@
 			}
 			.collection div{
 				width: 20%;
+			}
+			.collection p {
+				font-size: 20px;
 			}
 		}
 	</style>
@@ -74,7 +82,7 @@
 	<section class="py-5">
 		<h1 class="text-center display-1">MENU</h1>
 		<div>
-			<h3>Rounds</h3>
+			<h3 id="rings">Rings</h3>
 			<div class="collection collection-fade">
 				<div>
 					<img class="img-fluid" src="images/rings/bavarian.png">
@@ -105,6 +113,103 @@
 					<p>Dark Forest</p>
 				</div>
 			</div>
+
+			<h3 id="rounds">Rounds</h3>
+			<div class="collection collection-fade">
+				<div>
+					<img class="img-fluid" src="images/rounds/bavarian.png">
+					<p>Bavarian</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/boston-kreme.png">
+					<p>Boston Kreme</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/choco-wacko.png">
+					<p>Choco Wacko</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/death-by-choco.png">
+					<p>Cookie Death</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/blueberry.png">
+					<p>Blueberry</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/ube-premium.png">
+					<p>Ube Filled</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/dark-forest.png">
+					<p>Dark Forest</p>
+				</div>
+			</div>
+			
+			<h3 id="longjohns">Long Johns</h3>
+			<div class="collection collection-fade">
+				<div>
+					<img class="img-fluid" src="images/rounds/bavarian.png">
+					<p>Bavarian</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/boston-kreme.png">
+					<p>Boston Kreme</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/choco-wacko.png">
+					<p>Choco Wacko</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/death-by-choco.png">
+					<p>Cookie Death</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/blueberry.png">
+					<p>Blueberry</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/ube-premium.png">
+					<p>Ube Filled</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/dark-forest.png">
+					<p>Dark Forest</p>
+				</div>
+			</div>
+			
+			<h3 id="munchkins">Munchkins</h3>
+			<div class="collection collection-fade">
+				<div>
+					<img class="img-fluid" src="images/rounds/bavarian.png">
+					<p>Bavarian</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/boston-kreme.png">
+					<p>Boston Kreme</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/choco-wacko.png">
+					<p>Choco Wacko</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/death-by-choco.png">
+					<p>Cookie Death</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/blueberry.png">
+					<p>Blueberry</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/ube-premium.png">
+					<p>Ube Filled</p>
+				</div>
+				<div>
+					<img class="img-fluid" src="images/rounds/dark-forest.png">
+					<p>Dark Forest</p>
+				</div>
+			</div>
+			
 		</div>
 	</section>
 	<footer class="container-fluid pb-5">
@@ -154,6 +259,34 @@
 			</div>
 		</div>
 	</footer>
+	
+	<!-- Modal JAVASCRIPT-->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">This will add to your cart. To officially buy, go to cart then click Checkout.</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-warning" data-bs-dismiss="modal">Yes!</button>
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		const donuts = document.querySelectorAll(".collection div");
+		for(let a = 0; a < donuts.length; a++){
+			donuts[a].setAttribute("data-bs-toggle", "modal");
+			donuts[a].setAttribute("data-bs-target", "#exampleModal");
+			donuts[a].onclick = function(){
+				if(!this.ismove)
+					exampleModal.querySelector(".modal-title").innerHTML = "Would you like to buy " + donuts[a].querySelector("p").innerHTML + "?";
+			}
+		}
+	</script>
 	<script src="scripts/searchbar.js"></script>
 	<script src="scripts/collection.js"></script>
 </body>
