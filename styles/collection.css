@@ -6,6 +6,9 @@
 	overflow-y: hidden;
 	user-select: none;
 }
+.collection-fade {
+	-webkit-mask-image: -webkit-gradient(linear, 80% 50%, 100% 50%, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
 .collection p {
 	white-space: wrap;
 }
